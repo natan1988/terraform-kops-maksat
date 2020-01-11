@@ -186,7 +186,7 @@ resource "aws_autoscaling_group" "nodes-maksat1988-com" {
   name                 = "nodes.maksat1988.com"
   launch_configuration = "${aws_launch_configuration.nodes-maksat1988-com.id}"
   max_size             = "${var.max_size}"
-  max_size             = "${var.min_size}"
+  min_size             = "${var.min_size}"
   vpc_zone_identifier  = ["${aws_subnet.eu-west-1a-maksat1988-com.id}", "${aws_subnet.eu-west-1b-maksat1988-com.id}", "${aws_subnet.eu-west-1c-maksat1988-com.id}"]
 
   tag = {
